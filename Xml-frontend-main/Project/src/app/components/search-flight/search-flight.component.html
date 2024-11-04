@@ -1,0 +1,31 @@
+<div class="search">
+  <mat-form-field appearance="outline" >
+    <mat-label>Destination</mat-label>
+    <input matInput [(ngModel)]="searchRequestDto.airportDestination">
+  </mat-form-field><br>
+  <mat-form-field  appearance="outline" class="fields" >
+    <mat-label class="fields" >Departure</mat-label>
+    <input class="fields"  matInput [(ngModel)]="searchRequestDto.airportDeparture">
+  </mat-form-field><br>
+  <mat-form-field appearance="outline">
+    <mat-label>Date & time</mat-label>
+    <input matInput [(ngModel)]="searchRequestDto.departureTime">
+  </mat-form-field><br>
+  <mat-form-field appearance="outline">
+    <mat-label>Ticket amount</mat-label>
+    <input matInput [(ngModel)]="searchRequestDto.numPassengers">
+  </mat-form-field><br>
+  <button class="cta" (click)="search()">
+    <span class="hover-underline-animation"> SEARCH</span>
+    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+      <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+    </svg>
+  </button>
+  <br>
+  <button class="full-rounded"  (click)="refresh()">
+    <span>R E F R E S H</span>
+    <div class="border full-rounded"></div></button>
+  <br>
+
+</div>
+<app-search-response [flights]="flights"></app-search-response>

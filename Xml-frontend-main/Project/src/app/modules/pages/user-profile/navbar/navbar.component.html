@@ -1,0 +1,61 @@
+<header>
+  <nav>
+    <div class="logo">SkyBooker</div>
+    <ul>
+      <li class="shrink">
+        <a
+          routerLink="/loggedin"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+        >
+      </li>
+      <li class="shrink" *ngIf="isLoggedAdmin()">
+        <a
+          routerLink="/flights"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Flights</a>
+      </li>
+      <li class="shrink" *ngIf="isLoggedPatient()">
+        <a
+           routerLink="/flights/user/user677"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{ exact: true }">Flights</a>
+      </li>
+      <li class="shrink" *ngIf="isLoggedAdmin()">
+        <a
+          routerLink="/flights/add"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Add</a>
+      </li>
+      <li class="shrink" *ngIf="isLoggedPatient()">
+        <a
+          routerLink="/tickets/user677"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >Tickets</a
+        >
+      </li>
+
+
+    </ul>
+    <button (click)="onToggle()"> toggle  </button>
+
+    <div [ngClass]="isToggled ? 'open-menu ' : 'sub-menu-wrap'">
+      <div class="sub-menu">
+        <div class="user-info">
+         <h2>{{ name }}</h2>
+        </div>
+        <hr />
+        <a routerLink="/app/profile" class="sub-menu-link">
+         <p>My Profile</p>
+          <span>></span>
+        </a>
+        <a (click)="onLogout()" href="#" class="sub-menu-link red">
+        <p>Logout</p>
+          <span>></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<mat-card class="info">
+  <mat-card-title>Flight Id: {{flight?.id}}</mat-card-title>
+  <mat-card-content>
+    <p>From: {{flight?.airportDeparture}}</p>
+    <p>To: {{flight?.airportDestination}}</p>
+    <p>Date and time: {{flight?.departureTime}}</p>
+    <p>Duration: {{flight?.duration}} minutes</p>
+    <p>Ticket price: {{flight?.ticketPrice}}$</p>
+
+    <p>Available seats count: {{flight?.capacity}}</p>
+  </mat-card-content>
+</mat-card>
+
+<section id="footer" data-aos="fade-down" data-aos-duration="2000">
+  <app-footer-component></app-footer-component>
+</section>

@@ -1,0 +1,57 @@
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  margin-left: 300px;
+  margin-bottom: 50px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  layout: "row";
+}
+
+table {
+  width: 70%;
+  background-color: #f5f6f6;
+  font-family:"Times New Roman";
+}
+
+.table-title {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 28px;
+  color: #261867;
+  font-family: "Modern No. 20";
+}
+
+.cell-center {
+  text-align: center;
+}
+
+.clickable:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-button {
+  margin: 10px 20px 10px 10px;
+  color: black;
+  background-color: #7b9a8e;
+  float: right;
+}
+
+.table-header {
+  display: flex;
+  font-size: 20px;
+  font-family:"Times New Roman";
+}
+
+p {
+  float: left;
+  margin-right: auto;
+}
+
+.info{
+
+  margin-bottom: 500px;
+}

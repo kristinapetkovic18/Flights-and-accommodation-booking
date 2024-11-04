@@ -1,0 +1,50 @@
+<div class="welcome-page">
+  <section id="hero" data-aos="fade-down" data-aos-duration="2000">
+    <div class="svg-background">
+      <div class="not-logged-buttons">
+        <div class="right">
+          <a (click)="onClick('login')">
+            <button mat-button class="fancy" >
+              <span class="top-key"></span>
+              <span class="text">log in</span>
+              <span class="bottom-key-1"></span>
+              <span class="bottom-key-2"></span>
+
+            </button>
+          </a>
+
+          <a (click)="onClick('register')">
+            <button mat-button class="fancy">
+
+              <span class="top-key"></span>
+              <span class="text">register</span>
+              <span class="bottom-key-1"></span>
+              <span class="bottom-key-2"></span>
+
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="services" data-aos="fade-down" data-aos-duration="2200">
+    <div class="services-wrapper">
+      <div class="services-header">
+        <p class="little-title">Your best partner for travelling</p>
+        <h2>Unlock the Wonders of the World: Adventure Awaits with our Travel Booking Company!</h2>
+      </div>
+      <div class="services-content">
+        <app-accommodation-homepage></app-accommodation-homepage>
+      </div>
+    </div>
+  </section>
+  <section id="team">
+    <div class="team-wrapper" data-aos="fade-down" data-aos-duration="2200">
+    </div>
+
+  </section>
+
+  <section id="footer" data-aos="fade-down" data-aos-duration="2000">
+    <app-footer></app-footer>
+  </section>
+</div>

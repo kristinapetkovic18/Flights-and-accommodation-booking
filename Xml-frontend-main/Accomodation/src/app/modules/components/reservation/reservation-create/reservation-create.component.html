@@ -1,0 +1,49 @@
+<app-navbar></app-navbar><div class="container">
+
+  <mat-form-field>
+    <mat-label>Start date</mat-label>
+   <input matInput
+           #resultPickerModel="ngModel"
+          [min] = "minDate"
+           [matDatepicker]="resultPicker"
+           [(ngModel)]="reservation.startDate"
+           [matDatepickerFilter]="dateFilters">
+    <mat-datepicker-toggle matSuffix [for]="resultPicker"></mat-datepicker-toggle>
+    <mat-datepicker #resultPicker>
+    </mat-datepicker>
+  </mat-form-field><br>
+  <mat-form-field>
+    <mat-label>End date</mat-label>
+    <input matInput
+           #resultPickerModel="ngModel"
+           [matDatepicker]="resultPickers"
+           [min] = "minDate"
+           [(ngModel)]="reservation.endDate"
+           [matDatepickerFilter]="dateFilters">
+    <mat-datepicker-toggle matSuffix [for]="resultPickers"></mat-datepicker-toggle>
+    <mat-datepicker #resultPickers>
+    </mat-datepicker>
+  </mat-form-field><br>
+  <mat-form-field appearance="outline">
+      <mat-label>Guest number</mat-label>
+      <input matInput [(ngModel)]="reservation.numGuests">
+    </mat-form-field><br>
+  <mat-form-field appearance="outline">
+    <mat-label>Total price</mat-label>
+    <input matInput [(ngModel)]="totalPrice" [disabled]="true">
+  </mat-form-field><br>
+  <button class="cta" (click)="TotalPrice()">
+    <span class="hover-underline-animation">Price</span>
+    <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+      <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+    </svg>
+  </button>
+    <button class="cta" (click)="createReservation()">
+      <span class="hover-underline-animation"> CREATE</span>
+      <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+        <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+      </svg>
+    </button>
+
+</div>
+

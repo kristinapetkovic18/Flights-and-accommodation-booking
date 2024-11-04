@@ -1,0 +1,54 @@
+
+<div>
+  <form [formGroup]="registrationForm" (ngSubmit)="registration">
+    <div>
+
+      <div>
+        <span>Name</span>
+        <input [formControlName]="'name'" type="text" name="name" placeholder="Enter your name" required>
+      </div>
+
+      <div>
+        <span>Surname</span>
+        <input [formControlName]="'surname'" type="text" name="surname" placeholder="Enter your surname" required>
+      </div>
+
+      <div>
+        <span>Country</span>
+        <input [formControlName]="'country'" type="text" name="country" placeholder="Enter your country" required>
+      </div>
+
+      <div>
+        <span>City</span> <input [formControlName]="'city'" type="text"    name="city"
+                                 placeholder="Enter your city" required>
+      </div>
+
+
+      <div>
+        <span>Address</span> <input [formControlName]="'address'"  type="text" name="address"
+                                    placeholder="Enter your address" required>
+      </div>
+
+      <div>
+        <span>Mobile phone</span> <input [formControlName]="'mobile'"  type="tel" name="mobile"
+                                         placeholder="Enter your mobile phone" required>
+      </div>
+      <div>
+        <span>E-mail</span> <input [formControlName]="'email'" type="text" name="email"
+                                   placeholder="Enter your e-mail" required>
+      </div>
+
+      <div>
+        <span>Password</span> <input [formControlName]="'password'" type="password" name="password" required>
+      </div>
+
+
+      <div class="button">
+        <input type="submit" value="Registration" (click)="registration()">
+      </div>
+
+    </div>
+  </form>
+
+</div>
+<router-outlet></router-outlet>

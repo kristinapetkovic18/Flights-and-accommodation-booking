@@ -1,0 +1,39 @@
+<app-navbar></app-navbar>
+
+<h1>Your accommodation</h1>
+<ul xmlns="http://www.w3.org/1999/html">
+  <li *ngFor="let accommodation of accommodations" class="booking-card" [style.backgroundImage]="'url(' + accommodation.pictures + ')'">
+      git 
+
+    <div class="book-container">
+      <div class="content">
+        <button class="btn" (click)="chooseAccommodation(accommodation.id)">Book now</button>
+      </div>
+    </div>
+    <div class="informations-container">
+      <h2 class="title">{{accommodation.name}}</h2>
+
+      <p class="price">
+        <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="currentColor" d="M3,6H21V18H3V6M12,9A3,3 0 0,1 15,12A3,3 0 0,1 12,15A3,3 0 0,1 9,12A3,3 0 0,1 12,9M7,8A2,2 0 0,1 5,10V14A2,2 0 0,1 7,16H17A2,2 0 0,1 19,14V10A2,2 0 0,1 17,8H7Z" />
+        </svg>
+        {{accommodation.priceForOneGuest ? accommodation.price + ' per guest' : accommodation.price + ' for accommodation'}}
+      </p>
+      <div class="more-information">
+        <div class="info-and-date-container">
+          <div class="box info">
+            <svg class="icon" style="width:24px;height:24px" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M11,17H13V11H11V17Z" />
+            </svg>
+            <p>Min guests: {{accommodation.minGuests}} · Max guests: {{accommodation.maxGuests}}</p>
+          </div>
+        </div>
+        <p class="disclaimer"></p>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<section id="footer" data-aos="fade-down" data-aos-duration="2000">
+  <app-footer></app-footer>
+</section>

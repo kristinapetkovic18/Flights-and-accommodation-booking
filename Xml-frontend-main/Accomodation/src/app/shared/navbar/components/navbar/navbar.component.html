@@ -1,0 +1,79 @@
+<header>
+  <nav>
+    <div class="logo">TravelHub</div>
+    <ul>
+      <li class="shrink" *ngIf="isLoggedHost()" >
+        <a
+          (click)="Profile()"
+          routerLink="/profile"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">My profile</a>
+      </li>
+      <li class="shrink" *ngIf="isLoggedGuest()" >
+        <a
+          (click)="Profile()"
+          routerLink="/profile"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">My profile</a>
+      </li>
+      <li class="shrink" *ngIf="isLoggedHost()">
+        <a
+          (click)="ReservationsHost()"
+          routerLink="/reservations/host/1"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Reservations</a>
+      </li>
+      <li class="shrink" *ngIf="isLoggedGuest()">
+        <a
+
+          (click)="ReservationsGuest()" routerLink="/reservations/guest/1"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Reservations</a>
+      </li>
+      <li class="shrink" *ngIf="isLoggedGuest()">
+        <a
+          (click)="Accommodations()"
+          routerLink="/accommodations"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >Accommodations</a
+        >
+      </li>
+      <li class="shrink" *ngIf="isLoggedHost()">
+        <a
+          (click)="AccommodationsHost()"  routerLink="/accommodations/host"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >Your accommodation</a
+        >
+      </li>
+      <li class="shrink" *ngIf="isLoggedHost()">
+        <a
+          (click)="Add()"   routerLink="/accommodations/create"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">Add</a>
+      </li>
+
+
+
+    </ul>
+    <button (click)="onToggle()"> toggle  </button>
+
+    <div [ngClass]="isToggled ? 'open-menu ' : 'sub-menu-wrap'">
+      <div class="sub-menu">
+        <div class="user-info">
+          <h2>{{ name }}</h2>
+        </div>
+        <hr />
+        <a routerLink="/profile" (click)="profile()" class="sub-menu-link" [ngClass]="token == ''? {'display':'block'} : {'display':'none'}">
+          <p>My Profile</p>
+          <span>></span>
+        </a>
+        <a (click)="onLogout()" href="#" class="sub-menu-link red">
+          <p>Logout</p>
+          <span>></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>

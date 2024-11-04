@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
+
+
+.welcome-page {
+  height: auto;
+  width: auto;
+  background: #efefef;
+  display: flex;
+  flex-direction: column;
+}
+.search{
+  margin-top: 200px;
+}
+
+.aboutUs-wrapper {
+  width: 100%;
+  background-color: #efefef;
+  height: 0;
+}
+
+
+#hero {
+  height: 55px;
+  background-color: #969696;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+  rgba(0, 0, 0, 0.12) 0px -12px 30px,
+  rgba(0, 0, 0, 0.12) 0px 4px 6px,
+  rgba(0, 0, 0, 0.17) 0px 12px 13px,
+  rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  z-index: 10;
+}
+
+#services,
+#feedback,
+#team {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+#feedback {
+  background-color: #fff;
+}
+
+#services,
+#team {
+
+  background-color: #efefef;
+}
+
+#footer {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.little-title {
+  margin-left: 9.5rem;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: blue;
+}
+
+.aboutUs-content {
+  height: inherit;
+  padding-top: 2rem;
+}
+
+.services-wrapper {
+  width: 100%;
+  height: 100%;
+  padding-top: 10rem;
+}
+
+.services-content {
+  width: 85%;
+  margin-left: 140px;
+
+  margin-top: 5rem;
+}
+
+.team-wrapper {
+
+  padding-bottom: 200px;
+  margin-top: 5rem;
+}
+
+.feedback-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  padding-top: 10rem;
+}
+
+.feedback-container {
+  width: 80%;
+  display: grid;
+  place-items: center;
+  height: auto;
+  padding-bottom: 2rem;
+}
+
+.carousel-header {
+  margin-bottom: 5rem;
+  height: 10%;
+}
+
+.fb-carousel {
+  padding-bottom: 50px;
+  height: 90%;
+}
+
+.feedback-card {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.feedback-card:last-child {
+  margin-bottom: 5%;
+}
+
+.svg-background {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+h1 {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 0;
+  font-size: 80px;
+  line-height: 90px;
+  font-family: "Georgia";
+}
+
+h2 {
+  color: black;
+  margin-left: 9.3rem;
+  font-size: 30px;
+  margin-bottom: 2rem;
+}
+
+.homeButton {
+  display: block;
+  margin: auto;
+  margin-top: 5rem;
+  background-color: white;
+  width: 15%;
+  font-size: 20px;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.carrousel {
+  width: 100%;
+  max-width: 700px;
+}
+
+.not-logged-buttons {
+  display: flex;
+  justify-content:space-between;
+  margin-right: 5rem;
+  color: white;
+}
+
+.mat-button {
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+  font-size: 1.5rem !important;
+}
+
+.shrink {
+  transition: all .2s ease-in-out;
+}
+
+.shrink:hover {
+  transform: scale(0.9);
+}
+
+.left {
+  margin-left: 3rem;
+}
+.fancy {
+  background-color: transparent;
+  border: 2px solid #000;
+  border-radius: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 1.25em 2em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+}
+
+.fancy::before {
+  content: " ";
+  width: 1.5625rem;
+  height: 2px;
+  background: black;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+.fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #e8e8e8;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+  color: white;
+  background: black;
+}
+
+.fancy:hover::before {
+  width: 0.9375rem;
+  background: white;
+}
+
+.fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+}
+
+.table{
+  margin-top: 150px;
+}

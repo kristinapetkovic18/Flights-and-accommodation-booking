@@ -1,0 +1,15 @@
+.welcome-page {
+  height: auto;
+  width: auto;
+  background: #efefef;
+  display: flex;
+  flex-direction: column;
+}
+h2{
+  margin-top: 200px;
+  margin-left: 130px;
+
+  font-size: 60px;
+  color: #261867;
+  font-family: "Modern No. 20";
+}

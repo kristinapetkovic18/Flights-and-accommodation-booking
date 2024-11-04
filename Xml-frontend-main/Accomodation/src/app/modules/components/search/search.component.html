@@ -1,0 +1,53 @@
+<form (ngSubmit)="searchAccommodations()">
+  <label for="guestsNum">Number of Guests:</label>
+  <input type="number" id="guestsNum" name="guestsNum" [(ngModel)]="guestNum" required>
+
+  <label for="location">Location:</label>
+  <input type="number" id="location" name="location" [(ngModel)]="location" required>
+
+  <label for="startDate">Start Date:</label>
+  <input type="date" id="startDate" name="startDate" [(ngModel)]="startDate" required>
+
+  <label for="endDate">End Date:</label>
+  <input type="date" id="endDate" name="endDate" [(ngModel)]="endDate" required>
+
+  <button type="submit">Search</button>
+
+</form>
+
+<div *ngIf="searchedAccommodations && searchedAccommodations.length > 0">
+  <h2>Search Results:</h2>
+  <ul>
+    <li *ngFor="let accommodation of searchedAccommodations" class="booking-card">
+      <div class="book-container">
+        <div class="content">
+          <button class="btn" (click)="chooseAccommodation(accommodation.id)">Book now</button>
+        </div>
+      </div>
+      <div class="informations-container">
+        <h2 class="title">{{ accommodation.name }}</h2>
+        <p class="sub-title">{{ accommodation.locationId }}</p>
+        <p class="price">{{ accommodation.price }}</p>
+        <p class="price" *ngIf="accommodation.priceForOneGuest"> Prices are per guest, check total price </p>
+       <p class="price" *ngIf="!accommodation.priceForOneGuest"> Price per day is same for any number of guests</p>
+        <p class="price" *ngIf="accommodation.autoAcceptReservation"> Accommodation is automatically accepting reservations! You can cancel free of charge until 1 day before arrival</p>
+        <p class="price" *ngIf="!accommodation.autoAcceptReservation"> Create pending reservation and wait until host approves! You can cancel free of charge until 1 day before arrival</p>
+        <p class="price">{{ accommodationTotalPrices[accommodation.id] }}</p>
+        <button (click)="Reserve(accommodation.id)">Check price</button>
+        <div class="more-information">
+          <div class="info-and-date-container">
+            <div class="box info">
+              <p>Additional Information</p>
+
+            </div>
+            <div class="box date">
+              <p>Date Range: {{ startDate }} - {{ endDate }}</p>
+              <p>Guests: {{ guestNum }}</p>
+            </div>
+          </div>
+          <p class="disclaimer"></p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

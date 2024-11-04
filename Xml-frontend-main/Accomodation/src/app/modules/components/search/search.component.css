@@ -1,0 +1,100 @@
+/* Search Form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="number"],
+input[type="date"] {
+  padding: 5px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Search Results */
+.search-results {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.booking-card {
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.book-container {
+  flex: 0 0 30%;
+}
+
+.informations-container {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.sub-title {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.more-information {
+  display: flex;
+  align-items: center;
+}
+
+.info-and-date-container {
+  display: flex;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  fill: #888;
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: #888;
+}

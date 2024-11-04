@@ -1,0 +1,42 @@
+<app-navbar></app-navbar>
+<div class="container">
+
+  <div>
+    <mat-form-field appearance="outline" >
+      <mat-label>Destination</mat-label>
+      <input matInput [(ngModel)]="flight.airportDestination">
+    </mat-form-field><br>
+    <mat-form-field  appearance="outline" class="fields" >
+      <mat-label class="fields" >Departure</mat-label>
+      <input class="fields"  matInput [(ngModel)]="flight.airportDeparture">
+    </mat-form-field><br>
+    <mat-form-field appearance="outline">
+      <mat-label>Date & time</mat-label>
+      <input matInput [(ngModel)]="flight.departureTime">
+    </mat-form-field><br>
+    <mat-form-field appearance="outline">
+      <mat-label>Duration in minutes</mat-label>
+      <input matInput [(ngModel)]="flight.duration">
+    </mat-form-field><br>
+    <mat-form-field appearance="outline">
+      <mat-label>Ticket price</mat-label>
+      <input matInput [(ngModel)]="flight.ticketPrice">
+    </mat-form-field><br>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Available seats</mat-label>
+      <input matInput [(ngModel)]="flight.capacity">
+    </mat-form-field><br>
+
+    <button class="cta" (click)="createFlight()">
+      <span class="hover-underline-animation"> CREATE</span>
+      <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+        <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<section id="footer" data-aos="fade-down" data-aos-duration="2000">
+  <app-footer-component></app-footer-component>
+</section>

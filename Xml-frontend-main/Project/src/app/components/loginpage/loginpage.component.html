@@ -1,0 +1,18 @@
+<form (ngSubmit)="signin()" [formGroup]="loginForm" > <!--(ngSubmit)="login()"-->
+  <div>
+    <div>
+      <label>Email</label>
+      <input [formControlName]="'email'" type="text" required>
+    </div>
+
+    <div>
+      <label>Password</label>
+      <input  [formControlName]="'password'" type="password"  required >
+    </div>
+    <div>
+      <button  type="submit">Login</button> <!-- (click)="login()"-->
+      <button type="submit">Register</button>
+    </div>
+  </div>
+</form>
+<router-outlet></router-outlet>

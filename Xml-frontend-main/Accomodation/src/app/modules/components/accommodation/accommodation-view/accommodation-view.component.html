@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+
+<mat-card>
+  <mat-card-title>Accommodation {{accommodation?.id}}</mat-card-title>
+  <mat-card-content>
+    <img *ngIf="accommodation?.pictures" [src]="accommodation?.pictures" alt="Accommodation Photo">
+    <p>Name: {{accommodation?.name}}</p>
+    <p>Free parking: {{accommodation?.freeParking}}</p>
+    <p>Kitchen: {{accommodation?.kitchen}}</p>
+    <p>Location: {{accommodation?.locationId}}</p>
+    <p>Wifi: {{accommodation?.wifi}}</p>
+  </mat-card-content>
+</mat-card>
+
+<button class="cta" (click)="createReservation()">
+  <span class="hover-underline-animation"> BOOK now</span>
+  <svg viewBox="0 0 46 16" height="10" width="30" xmlns="http://www.w3.org/2000/svg" id="arrow-horizontal">
+    <path transform="translate(30)" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" data-name="Path 10" id="Path_10"></path>
+  </svg>
+</button>
